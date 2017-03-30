@@ -4,7 +4,7 @@ cd $(dirname $BASH_SOURCE)
 SETUP_DIR=$(pwd)
 
 # Only symlink bashrc and zshrc if they don't exist.
-# If they already exist but do not 'source ~/.dotfiles', then append it.
+# If they already exist but do not 'source ~/.dotfiles_prompt', then append it.
 for rc in bashrc zshrc; do
     if [ ! -e ~/.$rc ]; then
         ln -sfv $SETUP_DIR/$rc ~/.$rc
