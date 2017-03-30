@@ -1,0 +1,18 @@
+#
+# Aliases.
+#
+
+# Clear screen.
+alias c='clear'
+
+# List files and folders with readable file sizes.
+alias la='ls -lAF'
+
+# Print each PATH entry on a separate line.
+alias path='echo -e ${PATH//:/\\n}'
+
+# Check and install updates from App Store, homebrew, npm, and gem.
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; vim +PlugUpdate +qall'
+
+# Use vim instead of vi.
+alias vi='vim'
