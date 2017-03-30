@@ -38,3 +38,5 @@ fi
 
 # Load ~/.dotfiles which loads the other dotfiles.
 source ~/.dotfiles_profile
+
+unset SETUP_DIR
