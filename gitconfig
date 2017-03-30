@@ -87,6 +87,3 @@
 
     # Show line numbers for grep results by default.
 	lineNumber = true
-[user]
-	name = Jan Clarin
-	email = hi@janclarin.com
