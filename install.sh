@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $(dirname BASH_SOURCE)
+cd $(dirname $BASH_SOURCE)
 SETUP_DIR=$(pwd)
 
 # Only symlink bashrc and zshrc if they don't exist.
