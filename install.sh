@@ -5,16 +5,17 @@ SETUP_DIR=$(pwd)
 
 # Symlink dotfiles.
 for file in aliases bashrc dotfiles_profile exports gitconfig gitignore path \
-    zlogin zshrc; do
+    zim zlogin zshrc; do
     mkdir -pv dotfiles.old
     [ -e ~/.$file ] && mv -v ~/.$file dotfiles.old/.$file
     ln -sfv $SETUP_DIR/$file ~/.$file
 done
+unset SETUP_DIR
 
 # macOS-specific installations.
 if [ $(uname -s) = 'Darwin' ]; then
     # Prevents macOS terminal from displaying last login on start.
-    ln -sfv $SETUP_DIR/.hushlogin ~/.hushlogin
+    touch ~/.hushlogin
 
     # Install Homebrew if it doesn't exist.
     [ -z "$(which brew)" ] &&
@@ -29,5 +30,3 @@ fi
 
 # Load ~/.dotfiles which loads the other dotfiles.
 source ~/.dotfiles_profile
-
-unset SETUP_DIR
