@@ -1,11 +1,7 @@
 #
 # Zsh configurations.
 #
-
-# Source profile.
-if [ -f ~/.profile ]; then
-    source ~/.profile
-fi
+# Note: zsh automatically soruces .zprofile before .zshrc.
 
 # Configure vi mode.
 export KEYTIMEOUT=1 # Switch to vi-mode in 0.1 seconds instead of 0.4 seconds.
