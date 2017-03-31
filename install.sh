@@ -3,18 +3,9 @@
 cd $(dirname $BASH_SOURCE)
 SETUP_DIR=$(pwd)
 
-# Only symlink bashrc and zshrc if they don't exist.
-# If they already exist but do not 'source ~/.dotfiles_prompt', then append it.
-for rc in bashrc zshrc; do
-    if [ ! -e ~/.$rc ]; then
-        ln -sfv $SETUP_DIR/$rc ~/.$rc
-    elif ! grep -q -F 'source ~/.dotfiles_profile' ~/.$rc; then
-        echo 'source ~/.dotfiles_profile' >> ~/.$rc
-    fi
-done
-
 # Symlink dotfiles.
-for file in aliases dotfiles_profile exports gitconfig gitignore path; do
+for file in aliases bashrc dotfiles_profile exports gitconfig gitignore path \
+    zlogin zshrc; do
     mkdir -pv dotfiles.old
     [ -e ~/.$file ] && mv -v ~/.$file dotfiles.old/.$file
     ln -sfv $SETUP_DIR/$file ~/.$file
