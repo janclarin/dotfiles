@@ -4,6 +4,7 @@ cd $(dirname $BASH_SOURCE)
 SETUP_DIR=$(pwd)
 
 # Symlink dotfiles.
+echo "Symlink and back up dotfiles:"
 for file in aliases bashrc dotfiles_profile exports gitconfig gitignore path \
     zim zlogin zshrc; do
     mkdir -pv dotfiles.old
@@ -18,6 +19,7 @@ if [ $(uname -s) = 'Darwin' ]; then
     touch ~/.hushlogin
 
     # Install Homebrew if it doesn't exist.
+    echo "Install Homebrew packages:"
     [ -z "$(which brew)" ] &&
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -30,3 +32,8 @@ fi
 
 # Load ~/.dotfiles which loads the other dotfiles.
 source ~/.dotfiles_profile
+
+# Pull down submodules and update them.
+echo "Pull and update submodules:"
+git submodule update --init --recursive
+git submodule update --recursive --remote
