@@ -10,7 +10,7 @@ git submodule update --init --recursive
 # Symlink dotfiles and zim folder.
 echo "Symlink and back up dotfiles in dotfiles.old:"
 mkdir -pv dotfiles.old
-for file in aliases dotfiles_profile exports gitconfig gitignore path \
+for file in aliases profile exports gitconfig gitignore path \
     zim zlogin zshrc; do
     [ -e ~/.$file ] && mv -v ~/.$file dotfiles.old/.$file
     ln -sfv $SETUP_DIR/$file ~/.$file
@@ -34,8 +34,8 @@ if [ $(uname -s) = 'Darwin' ]; then
     brew install vim --with-python3
 fi
 
-# Loads dotfiles specified in the file.
-source ~/.dotfiles_profile
+# Loads profile which loads other dotfiles.
+source ~/.profile
 
 # Install vim configurations.
 echo "Install vimrc and plugins:"

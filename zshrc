@@ -2,17 +2,19 @@
 # Zsh configurations.
 #
 
+# Source profile.
+if [ -f ~/.profile ]; then
+    source ~/.profile
+fi
+
 # Configure vi mode.
 export KEYTIMEOUT=1 # Switch to vi-mode in 0.1 seconds instead of 0.4 seconds.
 bindkey -v # Use vi key bindings. Press ESC to get into command mode.
 bindkey -M vicmd 'H' beginning-of-line # Bind H to go to beginning of the line.
 bindkey -M vicmd 'L' end-of-line # Bind L to go to the end of the line.
 
-# Source dotfiles_profile.
-source ~/.dotfiles_profile
-
 # Configure zim.
-if [[ -s ~/.zim/init.zsh ]]; then
+if [ -f ~/.zim/init.zsh ]; then
 
     # Select enabled zim modules.
     zmodules=(
