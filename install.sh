@@ -3,7 +3,11 @@
 cd $(dirname $BASH_SOURCE)
 SETUP_DIR=$(pwd)
 
-# Symlink dotfiles.
+# Pull down submodules, i.e. zim, and update them.
+echo "Pull and update submodules:"
+git submodule update --init --recursive
+
+# Symlink dotfiles and zim folder.
 echo "Symlink and back up dotfiles:"
 for file in aliases bashrc dotfiles_profile exports gitconfig gitignore path \
     zim zlogin zshrc; do
@@ -33,7 +37,6 @@ fi
 # Load ~/.dotfiles which loads the other dotfiles.
 source ~/.dotfiles_profile
 
-# Pull down submodules and update them.
-echo "Pull and update submodules:"
-git submodule update --init --recursive
-git submodule update --recursive --remote
+# Install vim configurations.
+echo "Install vimrc and plugins:"
+./install-vim.sh
