@@ -11,7 +11,7 @@ bindkey -M vicmd 'L' end-of-line # Bind L to go to the end of the line.
 source ~/.dotfiles_profile
 
 # Source zim.
-if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
+if [[ -s ~/.zim/init.zsh ]]; then
 
     # Select enabled zim modules.
     zmodules=(
@@ -39,5 +39,5 @@ if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
     zhighlighters=(main brackets cursor)
 
     # Source zim.
-    source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
+    source ~/.zim/init.zsh
 fi
