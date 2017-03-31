@@ -34,7 +34,7 @@ if [ $(uname -s) = 'Darwin' ]; then
     brew install vim --with-python3
 fi
 
-# Load ~/.dotfiles which loads the other dotfiles.
+# Loads dotfiles specified in the file.
 source ~/.dotfiles_profile
 
 # Install vim configurations.
