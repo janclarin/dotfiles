@@ -11,7 +11,7 @@ git submodule update --init --recursive
 echo "Symlink and back up dotfiles in dotfiles.old:"
 mkdir -pv dotfiles.old
 for file in aliases profile exports gitconfig gitignore path \
-    zim zlogin zprofile zshrc; do
+            zim zlogin zprofile zshrc; do
     [ -e ~/.$file ] && mv -v ~/.$file dotfiles.old/.$file
     ln -sfv $SETUP_DIR/$file ~/.$file
 done
