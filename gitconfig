@@ -88,3 +88,6 @@
 
 	# Show line numbers for grep results by default.
 	lineNumber = true
+
+[include]
+    path = .gitconfig.local
