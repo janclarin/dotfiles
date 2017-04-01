@@ -18,3 +18,17 @@ source ~/.zlogin
 - `./install-vim.sh` installs just vimrc and plugins
 - `source ~/.zlogin` applies optimizations for
   [zim](https://github.com/Eriner/zim). Only needs to be run once
+
+## Customizations
+### Git
+Since `~/.gitconfig` is replaced, you will want to store your git user info in
+a `~/.gitconfig.local` file.
+
+e.g.
+```
+~/.gitconfig.local
+
+[user]
+    name = Jan Clarin
+    email = hi@janclarin.com
+```
