@@ -4,7 +4,6 @@
 call plug#begin('~/.vim/plugged')
 
 " vim-plug plugins
-Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/vader.vim'
@@ -61,9 +60,6 @@ let g:pymode_syntax_indent_errors=g:pymode_syntax_all
 let g:pymode_syntax_space_errors=g:pymode_syntax_all
 let g:pymode_virtualenv=1
 
-" git-gutter settings
-let g:gitgutter_enabled=0
-
 " Set map leader
 let mapleader=' '
 
@@ -87,9 +83,6 @@ nnoremap <leader>l :bnext<cr>
 nnoremap <leader>h :bprevious<cr>
 nnoremap <leader>bq :bdelete<cr>
 nnoremap <leader>bl :ls<cr>
-
-" git-gutter mappings
-nnoremap <leader>d :GitGutterToggle<cr>
 
 " vim-fugitive mappings
 nnoremap <leader>gb :Gblame<cr>
