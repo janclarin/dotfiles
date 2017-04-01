@@ -2,16 +2,28 @@
 
     # Add
     a = add
+    aa = add --all
 
     # View branch list with last commit message
     b = branch -v
+
+    # Checkout
+    co = checkout
+    cb = checkout -b
 
     # Commit
     c = commit -m
     ca = commit --amend
 
+    # Diff
+    d = diff --color-words
+    dc = diff --cached
+
     # View abbreviated SHA, description, history graph of the latest 20 commits
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+    # Remote
+    r = remote -v
 
     # View the current working tree status using the short format
     s = status -s
