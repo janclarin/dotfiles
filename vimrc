@@ -37,9 +37,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git'
 
 " vim-airline settings
 let g:airline_theme='solarized'
-let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#branch#enabled=1
-let g:airline#extensions#syntastic#enabled=1
+let g:airline#extensions#tabline#enabled=1
 
 " delimitMate settings
 let delimitMate_expand_cr=1
