@@ -21,10 +21,9 @@ source ~/.zlogin
 
 ## Customizations
 ### Git
-Since `~/.gitconfig` is replaced, you will want to store your git user info in
-a `~/.gitconfig.local` file.
+Since `~/.gitconfig` is replaced, store your custom git configurations, e.g.
+user info, in a `~/.gitconfig.local` file.
 
-e.g.
 ```
 ~/.gitconfig.local
 
