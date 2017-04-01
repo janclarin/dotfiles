@@ -4,7 +4,7 @@
 call plug#begin('~/.vim/plugged')
 
 " vim-plug plugins
-Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/vader.vim'
 Plug 'klen/python-mode', { 'for': 'python' }
@@ -23,8 +23,7 @@ call plug#end()
 set nocompatible
 
 " Theme
-set background=dark
-colorscheme solarized
+colorscheme base16-eighties
 
 " ale settings
 let g:ale_emit_conflict_warnings=0
@@ -38,10 +37,11 @@ let g:ctrlp_custom_ignore='node_modules\|^\.DS_Store\|^\.git'
 let g:ctrlp_user_command=['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " vim-airline settings
-let g:airline_theme='solarized'
+let g:airline_theme='base16_eighties'
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#buffer_nr_show=1
+let g:airline_powerline_fonts=1
 
 " delimitMate settings
 let delimitMate_expand_cr=1
