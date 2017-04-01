@@ -1,5 +1,15 @@
 [alias]
 
+    # Add
+    a = add
+
+    # View branch list with last commit message
+    b = branch -v
+
+    # Commit
+    c = commit -m
+    ca = commit --amend
+
 	# View abbreviated SHA, description, history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
@@ -81,8 +91,6 @@
 
 	# Push only the current branch to the one that git pull would pull from.
 	default = simple
-	# Make `git push` push relevant annotated tags when pushing branches out.
-	followTags = true
 
 [grep]
 
