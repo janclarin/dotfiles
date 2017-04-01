@@ -1,1 +1,5 @@
+# Local files.
+*.local
+
+# Backed up dotfiles.
 dotfiles.old/
