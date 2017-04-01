@@ -16,10 +16,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 
-" initialize plugin system
+" Initialize plugin system
 call plug#end()
 
-" use vim settings over vi settings
+" Use vim settings over vi settings
 set nocompatible
 
 " Theme
@@ -33,7 +33,10 @@ let g:ale_emit_conflict_warnings=0
 let g:ctrlp_match_window='bottom,order:ttb'
 let g:ctrlp_switch_buffer=0
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git'
+let g:ctrlp_custom_ignore='node_modules\|^\.DS_Store\|^\.git'
+" Ignore files in .gitignore
+let g:ctrlp_user_command=['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 
 " vim-airline settings
 let g:airline_theme='solarized'
