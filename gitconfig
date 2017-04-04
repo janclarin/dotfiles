@@ -11,6 +11,9 @@
     co = checkout
     cb = checkout -b
 
+    # Cherry pick
+    cp = cherry-pick
+
     # Commit
     c = commit -m
     ca = commit --amend
