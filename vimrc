@@ -91,7 +91,7 @@ nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gB :Gbrowse<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gg :Ggrep<cr>
+nnoremap <leader>gg :Ggrep<space>
 nnoremap <leader>gm :Gmove<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gw :Gwrite<cr>
