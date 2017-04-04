@@ -37,7 +37,6 @@ let g:ctrlp_custom_ignore='node_modules\|^\.DS_Store\|^\.git'
 " Ignore files in .gitignore
 let g:ctrlp_user_command=['.git', 'cd %s && git ls-files -co --exclude-standard']
 
-
 " vim-airline settings
 let g:airline_theme='solarized'
 let g:airline#extensions#branch#enabled=1
@@ -83,7 +82,7 @@ nnoremap <leader>be :edit
 nnoremap <leader>ba :badd 
 nnoremap <leader>l :bnext<cr>
 nnoremap <leader>h :bprevious<cr>
-nnoremap <leader>bq :bdelete<cr>
+nnoremap <leader>q :bdelete<cr>
 nnoremap <leader>bl :ls<cr>
 
 " vim-fugitive mappings
