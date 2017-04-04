@@ -83,7 +83,6 @@ nnoremap <leader>ba :badd
 nnoremap <leader>l :bnext<cr>
 nnoremap <leader>h :bprevious<cr>
 nnoremap <leader>q :bdelete<cr>
-nnoremap <leader>bl :ls<cr>
 
 " vim-fugitive mappings
 nnoremap <leader>gb :Gblame<cr>
