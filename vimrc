@@ -41,6 +41,7 @@ let g:ctrlp_user_command=['.git', 'cd %s && git ls-files -co --exclude-standard'
 let g:airline_theme='solarized'
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#buffer_nr_show=1
 
 " delimitMate settings
 let delimitMate_expand_cr=1
