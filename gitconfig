@@ -16,6 +16,9 @@
     # Cherry pick
     cp = cherry-pick
 
+    # Clone
+    cl = clone
+
     # Commit
     c = commit
     ca = commit -a
