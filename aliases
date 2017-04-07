@@ -13,3 +13,6 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 
 # Use vim instead of vi.
 alias vi='vim'
+
+# Exit session.
+alias x='exit'
