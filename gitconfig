@@ -6,6 +6,8 @@
 
     # View branch list with last commit message
     b = branch -v
+    bd = branch -d
+    bD = branch -D
 
     # Checkout
     co = checkout
