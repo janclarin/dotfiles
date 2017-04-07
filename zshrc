@@ -16,7 +16,6 @@ if [ -f ~/.zim/init.zsh ]; then
     zmodules=(
         directory \
         environment \
-        git \
         git-info \
         history \
         input \
