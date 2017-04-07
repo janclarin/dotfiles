@@ -15,8 +15,9 @@
     cp = cherry-pick
 
     # Commit
-    c = commit -m
-    ca = commit --amend
+    c = commit
+    ca = commit -a
+    cm = commit -m
 
     # Diff
     d = diff --color-words
@@ -25,8 +26,8 @@
     # View abbreviated SHA, description, history graph of the latest 20 commits
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
-    # Remote
-    r = remote -v
+    # Rebase
+    rb = rebase
 
     # View the current working tree status using the short format
     s = status -s
