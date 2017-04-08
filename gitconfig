@@ -11,7 +11,7 @@
 
     # Checkout
     co = checkout
-    cb = checkout -b
+    cob = checkout -b
 
     # Cherry pick
     cp = cherry-pick
