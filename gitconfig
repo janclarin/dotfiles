@@ -37,8 +37,8 @@
 
     # Reset
     rs = reset
-    rsS = reset --soft HEAD~1
-    rsH = reset --hard HEAD~1
+    rsS = reset --soft
+    rsH = reset --hard
 
     # View the current working tree status using the short format
     s = status -s
