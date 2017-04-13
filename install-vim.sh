@@ -25,3 +25,22 @@ echo "vimrc has been linked as ~/.vimrc and installed plugins."
 
 # Unset variables.
 unset SETUP_DIR
+
+# macOS-specific installations.
+if [ $1 = '--nvim' ]; then
+    if [ $(uname -s) = 'Darwin' ]; then
+        # Install neovim and python support dependencies.
+        brew install neovim/neovim/neovim
+        pip2 install --user neovim
+        pip3 install --user neovim
+
+        # Link vim configuration to neovim.
+        mkdir ~/.config
+        ln -s ~/.vim ~/.config/nvim
+        ln -s ~/.vimrc ~/.config/nvim/init.vim
+    else
+        echo "Neovim installation is currently only supported on macOS"
+        echo "To install Neovim manually on other operating systems, refer to github.com/neovim/neovim/wiki/Installing-Neovim"
+        echo "After installing, run the following: mkdir ~/.config; ln -s ~/.vim ~/.config/nvim; ln -s ~/.vimrc ~/.config/nvim/init.vim"
+    fi
+fi
