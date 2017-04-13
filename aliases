@@ -14,8 +14,12 @@ alias path='echo -e ${PATH//:/\\n}'
 # Check and install updates from App Store, homebrew, npm, and gem.
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; vim +PlugUpdate +qall'
 
-# Use vim instead of vi.
-alias vi='vim'
+# Use nvim or vim instead of vi.
+if (( $+commands[nvim] )); then
+    alias vi='nvim'
+else
+    alias vi='vim'
+fi
 
 # Exit session.
 alias x='exit'
