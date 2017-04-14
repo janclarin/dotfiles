@@ -36,7 +36,3 @@ fi
 
 # Loads profile which loads other dotfiles.
 source ~/.profile
-
-# Install vim configurations.
-echo "Install vimrc and plugins:"
-./install-vim.sh
