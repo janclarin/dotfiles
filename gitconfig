@@ -39,7 +39,7 @@
     plr = pull --rebase
 
     # Push
-    ph = push
+    ps = push
 
     # Rebase
     rb = rebase
