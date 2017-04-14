@@ -9,7 +9,7 @@ cd ~/.dotfiles
 ./install-vim.sh [--nvim]
 
 *Change shell to zsh, might need sudo*
-chsh -s =zsh
+chsh -s $(which zsh)
 
 *Open new terminal*
 source ~/.zlogin
