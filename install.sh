@@ -10,7 +10,8 @@ git submodule update --init --recursive
 # Symlink dotfiles and zim folder.
 echo "Symlink and back up dotfiles in dotfiles.old:"
 mkdir -pv dotfiles.old
-for file in aliases profile exports gitconfig gitignore path \
+for file in aliases exports path profile \
+            gitconfig gitignore \
             zim zlogin zprofile zshrc; do
     [ -e ~/.$file ] && mv -v ~/.$file dotfiles.old/.$file
     ln -sfv $SETUP_DIR/$file ~/.$file
@@ -36,6 +37,10 @@ if [ $(uname -s) = 'Darwin' ]; then
     # Configure Homebrew packages.
     # fzf
     /usr/local/opt/fzf/install
+else
+    # Install and configure fzf.
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
 fi
 
 # Loads profile which loads other dotfiles.
