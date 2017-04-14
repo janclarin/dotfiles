@@ -24,6 +24,7 @@
     ca = commit -a
     cm = commit -m
     cam = commit -am
+    cA = commit --amend
 
     # Diff
     d = diff --color-words
