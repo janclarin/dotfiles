@@ -38,3 +38,6 @@ if [ -f ~/.zim/init.zsh ]; then
     # Source zim.
     source ~/.zim/init.zsh
 fi
+
+# Source fzf.
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
