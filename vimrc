@@ -5,7 +5,8 @@ call plug#begin('~/.vim/plugged')
 
 " vim-plug plugins
 Plug 'chriskempson/base16-vim'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vader.vim'
 Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript'}
