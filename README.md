@@ -6,6 +6,7 @@ My configuration files for git, vim, zsh, etc.
 git clone https://github.com/janclarin/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh
+./install-vim.sh [--nvim]
 
 *Change shell to zsh, might need sudo*
 chsh -s =zsh
@@ -14,8 +15,9 @@ chsh -s =zsh
 source ~/.zlogin
 ```
 
+### Installation info
 - `./install.sh` installs dotfiles, zim, vimrc & plugins, and homebrew on macOS
-- `./install-vim.sh` installs just vimrc and plugins
+- `./install-vim.sh` installs just vimrc, vim plugins, and, optionally, Neovim
 - `source ~/.zlogin` applies optimizations for
   [zim](https://github.com/Eriner/zim). Only needs to be run once
 
