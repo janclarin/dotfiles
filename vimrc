@@ -37,17 +37,13 @@ let g:ctrlp_custom_ignore='node_modules\|^\.DS_Store\|^\.git'
 " Ignore files in .gitignore
 let g:ctrlp_user_command=['.git', 'cd %s && git ls-files -co --exclude-standard']
 
-" vim-airline settings
-let g:airline_theme='base16_eighties'
-let g:airline#extensions#branch#enabled=1
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#buffer_nr_show=1
-
 " delimitMate settings
 let delimitMate_expand_cr=1
 
-" vim-jsx settings
-let g:jsx_ext_required=0
+" fzf settings
+if has('nvim')
+    let $FZF_DEFAULT_OPTS .= ' --inline-info'
+endif
 
 " python-mode settings
 let g:pymode_breakpoint=0
@@ -61,6 +57,15 @@ let g:pymode_syntax_all=1
 let g:pymode_syntax_indent_errors=g:pymode_syntax_all
 let g:pymode_syntax_space_errors=g:pymode_syntax_all
 let g:pymode_virtualenv=1
+
+" vim-airline settings
+let g:airline_theme='base16_eighties'
+let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#buffer_nr_show=1
+
+" vim-jsx settings
+let g:jsx_ext_required=0
 
 " Set map leader
 let mapleader=' '
@@ -95,6 +100,9 @@ nnoremap <leader>7 :7b<cr>
 nnoremap <leader>8 :8b<cr>
 nnoremap <leader>9 :9b<cr>
 nnoremap <leader>0 :10b<cr>
+
+" fzf mappings
+nnoremap <silent> <leader>j :Files<cr>
 
 " vim-fugitive mappings
 nnoremap <leader>gb :Gblame<cr>
