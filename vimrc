@@ -6,7 +6,7 @@ call plug#begin('~/.vim/plugged')
 " vim-plug plugins
 Plug 'chriskempson/base16-vim'
 Plug 'junegunn/fzf', { 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vader.vim'
 Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript'}
@@ -103,6 +103,7 @@ nnoremap <leader>0 :10b<cr>
 
 " fzf mappings
 nnoremap <silent> <leader>j :Files<cr>
+nnoremap <leader>gl :Commits<cr>
 
 " vim-fugitive mappings
 nnoremap <leader>gb :Gblame<cr>
@@ -115,7 +116,6 @@ nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>gW :Gwq<cr>
 nnoremap <leader>git :Git<space>
-nnoremap <leader>gl :Git log --pretty=oneline -n 20 --graph --abbrev-commit<cr>
 nnoremap <leader>gp :Git pull<cr>
 nnoremap <leader>gP :Git push<cr>
 
