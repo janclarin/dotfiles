@@ -3,6 +3,7 @@
     # Add
     a = add
     aa = add --all
+    ap = add --patch
 
     # View branch list with last commit message
     b = branch -v
