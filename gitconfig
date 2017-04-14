@@ -32,6 +32,13 @@
     # View abbreviated SHA, description, history graph of the latest 20 commits
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
+    # Pull
+    pl = pull
+    plr = pull --rebase
+
+    # Push
+    ph = push
+
     # Rebase
     rb = rebase
 
