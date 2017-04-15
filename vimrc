@@ -19,12 +19,7 @@ Plug 'w0rp/ale'
 
 " Neovim-specific plugins.
 if has('nvim')
-    " fzf settings
-    let $FZF_DEFAULT_OPTS .= ' --inline-info'
-
-    " deoplete settings.
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    let g:deoplete#enable_at_startup=1
 endif
 
 " Initialize plugin system
@@ -99,7 +94,7 @@ nnoremap <leader>9 :9b<cr>
 nnoremap <leader>0 :10b<cr>
 
 " fzf mappings
-nnoremap <silent> <leader>j :Files<cr>
+nnoremap <C-T> :Files<cr>
 nnoremap <leader>gl :Commits<cr>
 
 " vim-fugitive mappings
