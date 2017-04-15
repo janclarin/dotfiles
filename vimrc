@@ -159,6 +159,7 @@ let g:jsx_ext_required=0
 
 " fzf mappings
 nnoremap <C-T> :Files<cr>
+nnoremap <leader><enter> :Buffers<cr>
 nnoremap <leader>gl :Commits<cr>
 
 " vim-fugitive mappings
