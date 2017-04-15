@@ -17,6 +17,16 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 
+" Neovim-specific plugins.
+if has('nvim')
+    " fzf settings
+    let $FZF_DEFAULT_OPTS .= ' --inline-info'
+
+    " deoplete settings.
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    let g:deoplete#enable_at_startup=1
+endif
+
 " Initialize plugin system
 call plug#end()
 
@@ -31,11 +41,6 @@ let g:ale_emit_conflict_warnings=0
 
 " delimitMate settings
 let delimitMate_expand_cr=1
-
-" fzf settings
-if has('nvim')
-    let $FZF_DEFAULT_OPTS .= ' --inline-info'
-endif
 
 " python-mode settings
 let g:pymode_breakpoint=0
