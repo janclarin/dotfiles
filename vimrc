@@ -136,6 +136,11 @@ let g:ale_emit_conflict_warnings=0
 " delimitMate settings
 let delimitMate_expand_cr=1
 
+" fzf mappings
+nnoremap <C-T> :Files<cr>
+nnoremap <leader><enter> :Buffers<cr>
+nnoremap <leader>gl :Commits<cr>
+
 " python-mode settings
 let g:pymode_breakpoint=0
 let g:pymode_folding=0
@@ -154,14 +159,6 @@ let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#buffer_nr_show=1
 
-" vim-jsx settings
-let g:jsx_ext_required=0
-
-" fzf mappings
-nnoremap <C-T> :Files<cr>
-nnoremap <leader><enter> :Buffers<cr>
-nnoremap <leader>gl :Commits<cr>
-
 " vim-fugitive mappings
 nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gB :Gbrowse<cr>
@@ -175,3 +172,6 @@ nnoremap <leader>gW :Gwq<cr>
 nnoremap <leader>git :Git<space>
 nnoremap <leader>gp :Git pull<cr>
 nnoremap <leader>gP :Git push<cr>
+
+" vim-jsx settings
+let g:jsx_ext_required=0
