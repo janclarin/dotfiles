@@ -110,22 +110,10 @@ nnoremap // :nohl<cr>
 nnoremap <leader>v "+p
 
 " Buffer managing mappings
-nnoremap <leader>be :edit 
-nnoremap <leader>ba :badd 
+nnoremap <leader>e :edit 
 nnoremap <leader>l :bnext<cr>
 nnoremap <leader>h :bprevious<cr>
 nnoremap <leader>q :bdelete<cr>
-" Switch to buffer number
-nnoremap <leader>1 :1b<cr>
-nnoremap <leader>2 :2b<cr>
-nnoremap <leader>3 :3b<cr>
-nnoremap <leader>4 :4b<cr>
-nnoremap <leader>5 :5b<cr>
-nnoremap <leader>6 :6b<cr>
-nnoremap <leader>7 :7b<cr>
-nnoremap <leader>8 :8b<cr>
-nnoremap <leader>9 :9b<cr>
-nnoremap <leader>0 :10b<cr>
 
 " -----------------------------------------------------------------------------
 " Plugins
@@ -157,7 +145,6 @@ let g:pymode_virtualenv=1
 " vim-airline settings
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#buffer_nr_show=1
 
 " vim-fugitive mappings
 nnoremap <leader>gb :Gblame<cr>
