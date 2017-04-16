@@ -14,6 +14,7 @@ if has('nvim')
 endif
 
 Plug 'chriskempson/base16-vim'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vader.vim'
