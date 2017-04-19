@@ -123,7 +123,10 @@ nnoremap <leader>q :bdelete<cr>
 let g:ale_emit_conflict_warnings=0
 
 " delimitMate settings
-let delimitMate_expand_cr=1
+let g:delimitMate_expand_cr=1
+
+" deoplete settings
+let g:deoplete#enable_at_startup = 1
 
 " fzf mappings
 nnoremap <C-T> :Files<cr>
