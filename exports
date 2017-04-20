@@ -1,6 +1,9 @@
 # Make vim the default editor.
 export EDITOR='vi'
 
+# Platform.
+export PLATFORM=$(uname -s)
+
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8'
 
