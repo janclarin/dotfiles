@@ -1,17 +1,33 @@
 # Dotfiles
-My configuration files for git, vim, zsh, etc.
+Configuration files for git, vim, zsh, etc.
 
-## Usage
+## Requirements
+##### Set zsh as login shell
+
+```
+chsh -s $(which zsh)
+```
+
+## Install
+##### Clone the repository
 ```
 git clone https://github.com/janclarin/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
+```
+
+##### Run installation scripts
+```
 ./install.sh
 ./install-vim.sh [--nvim]
+```
 
-*Change shell to zsh, might need sudo*
-chsh -s $(which zsh)
+Specify the `--nvim` flag to install [Neovim](https://github.com/neovim/neovim).
+Use the `vi` alias to open Neovim if it's installed. This defaults to vim.
 
-*Open new terminal*
+##### Run optimization for [zim](https://github.com/Eriner/zim)
+Open a new terminal and run:
+
+```
 source ~/.zlogin
 ```
 
