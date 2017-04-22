@@ -166,3 +166,10 @@ nnoremap <leader>gP :Git push<cr>
 
 " vim-jsx settings
 let g:jsx_ext_required=0
+
+" -----------------------------------------------------------------------------
+" Local configuration
+" -----------------------------------------------------------------------------
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
