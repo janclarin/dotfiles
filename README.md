@@ -26,10 +26,19 @@ source ~/.zlogin
 Since `~/.gitconfig` is replaced, store your custom git configurations, e.g.
 user info, in a `~/.gitconfig.local` file.
 
-```
-~/.gitconfig.local
+Sample `~/.gitconfig.local`
 
+```
 [user]
     name = Jan Clarin
     email = hi@janclarin.com
+```
+
+### Vim
+Sample `~/.vimrc.local`
+
+```
+" neovim local configuration
+let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 ```
