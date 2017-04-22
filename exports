@@ -40,3 +40,6 @@ export FZF_DEFAULT_OPTS="
 }
 
 _gen_fzf_default_opts
+
+# Source local exports.
+[ -e "~/.exports.local" ] && source "~/.exports.local"
