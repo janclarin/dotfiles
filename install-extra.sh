@@ -4,12 +4,10 @@
 _install_tiny_care_terminal() {
     npm install -g git-standup tiny-care-terminal
 
-    local exportsLocalFile='~/.exports.local'
-    if [ ! -e "$exportsLocalFile" ]; then
-        touch "$exportsLocalFile"
-    fi
+    local exportsLocalFile=~/.exports.local
+    touch "$exportsLocalFile"
 
-    echo "Config for tiny-care-terminal should be set in ~/.exports.local"
+    echo "Config for tiny-care-terminal should be set in $exportsLocalFile"
     echo "For more info: github.com/notwaldorf/tiny-care-terminal"
 }
 
