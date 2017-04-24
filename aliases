@@ -18,6 +18,9 @@ elif [ "$PLATFORM" = 'Linux' ]; then
     alias o='xdg-open'
 fi
 
+# tiny-care-terminal
+alias ttc='tiny-care-terminal'
+
 # Check and install updates from App Store, homebrew, npm, and gem.
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; vim +PlugUpdate +qall'
 
