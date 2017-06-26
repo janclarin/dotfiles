@@ -2,11 +2,11 @@
 
     # Add
     a = add
-    aa = add --all
+    aa = add --all --verbose
     ap = add --patch
 
     # View branch list with last commit message
-    b = branch -v
+    b = branch --verbose
     bd = branch -d
     bD = branch -D
 
