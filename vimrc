@@ -27,6 +27,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 
+" Local plugins
+if filereadable($HOME . "/.vimrc.plugins.local")
+  source ~/.vimrc.plugins.local
+endif
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
