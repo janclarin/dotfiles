@@ -15,8 +15,8 @@ endif
 
 Plug 'chriskempson/base16-vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'junegunn/fzf', { 'do': './install --all' }
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vader.vim'
 Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript'}
