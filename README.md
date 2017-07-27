@@ -51,10 +51,18 @@ Sample `~/.gitconfig.local`
 ```
 
 ### Vim
-Sample `~/.vimrc.local`
+Sample `~/.vimrc.local` is for customized vim configs.
 
 ```
 " neovim local configuration
 let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
+```
+
+Sample `~/.vimrc.plugins.local` for customized or secret plugins. Loaded with [vim-plug](https://github.com/junegunn/vim-plug).
+
+
+```
+" my vim plugins loaded with vim-plug
+Plug 'vim-syntastic/syntastic'
 ```
