@@ -13,7 +13,7 @@ if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 endif
 
-Plug 'chriskempson/base16-vim'
+Plug 'altercation/vim-colors-solarized'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -37,8 +37,10 @@ call plug#end()
 " -----------------------------------------------------------------------------
 " Theme settings
 " -----------------------------------------------------------------------------
-colorscheme base16-eighties
-let g:airline_theme='base16_eighties'
+set t_Co=256
+set background=dark
+colorscheme solarized
+let g:airline_theme='solarized'
 
 " -----------------------------------------------------------------------------
 " Basic settings
