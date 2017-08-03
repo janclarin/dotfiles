@@ -3,3 +3,6 @@
 
 # Backed up dotfiles.
 dotfiles.old/
+
+# Auto-generated bashrc file by fzf.
+bashrc
