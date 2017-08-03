@@ -34,6 +34,7 @@ source ~/.zlogin
 ### Installation info
 - `./install.sh` installs dotfiles, zim, vimrc & plugins, and homebrew on macOS
 - `./install-vim.sh` installs just vimrc, vim plugins, and, optionally, Neovim
+- `./install-tmux.sh` installs tmux.conf and [tpm](https://github.com/tmux-plugins/tpm)
 - `source ~/.zlogin` applies optimizations for
   [zim](https://github.com/Eriner/zim). Only needs to be run once
 
