@@ -2,6 +2,9 @@
 # Prezto configurations.
 #
 
+# Enable color output.
+zstyle ':prezto:*:*' color 'yes'
+
 # Set the Prezto modules to load (browse modules). The order matters.
 zstyle ':prezto:load' pmodule \
     'environment' \
