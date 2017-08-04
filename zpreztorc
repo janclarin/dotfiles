@@ -1,0 +1,29 @@
+#
+# Prezto configurations.
+#
+
+# Set the Prezto modules to load (browse modules). The order matters.
+zstyle ':prezto:load' pmodule \
+    'environment' \
+    'terminal' \
+    'editor' \
+    'history' \
+    'directory' \
+    'spectrum' \
+    'utility' \
+    'completion' \
+    'syntax-highlighting' \
+    'prompt'
+
+# Set theme.
+zstyle ':prezto:module:prompt' theme 'pure'
+
+# Set the string below to the desired terminal title format string.
+# Format: 'username@host: /current/directory'
+zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+
+# Set highlighters used with the syntax-highlighting module.
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+    'main' \
+    'brackets' \
+    'cursor'

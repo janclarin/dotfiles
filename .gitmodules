@@ -1,4 +1,4 @@
-[submodule "zim"]
-    path = zim
-    url = https://github.com/Eriner/zim.git
+[submodule "prezto"]
+    path = prezto
+    url = https://github.com/sorin-ionescu/prezto.git
     ignore = dirty
