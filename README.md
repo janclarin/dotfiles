@@ -1,5 +1,5 @@
 # Dotfiles
-Configuration files for git, vim, zsh,
+Configuration files for git, vim, zsh, and
 [prezto](https://github.com/sorin-ionescu/prezto).
 
 ## Requirements
@@ -28,8 +28,9 @@ Use the `vi` alias to open Neovim if it's installed. This defaults to vim.
 
 ### Installation info
 - `./install.sh` installs dotfiles, prezto, vimrc & plugins, homebrew on macOS
-- `./install-vim.sh` installs just vimrc, vim plugins. Neovim is optional flag.
-- `./install-tmux.sh` installs tmux.conf and [tpm](https://github.com/tmux-plugins/tpm)
+- `./install-vim.sh` installs just vimrc, vim plugins. Neovim is optional flag
+- `./install-tmux.sh` installs tmux.conf and
+    [tpm](https://github.com/tmux-plugins/tpm)
 
 ## Customizations
 ### Git
@@ -53,10 +54,19 @@ let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 ```
 
-Sample `~/.vimrc.plugins.local` for customized or secret plugins. Loaded with [vim-plug](https://github.com/junegunn/vim-plug).
+Sample `~/.vimrc.plugins.local` for customized or secret plugins.
+Loaded with [vim-plug](https://github.com/junegunn/vim-plug).
 
 
 ```
 " my vim plugins loaded with vim-plug
 Plug 'vim-syntastic/syntastic'
 ```
+
+### Other *.local files
+Currently supports the following local versions of source files that are loaded
+after the dotfiles version.
+
+- `path.local`
+- `exports.local`
+- `aliases.local`
