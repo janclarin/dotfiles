@@ -1,5 +1,6 @@
 # Dotfiles
-Configuration files for git, vim, zsh, etc.
+Configuration files for git, vim, zsh,
+[prezto](https://github.com/sorin-ionescu/prezto).
 
 ## Requirements
 ##### Set zsh as login shell
@@ -24,19 +25,11 @@ cd ~/.dotfiles
 Specify the `--nvim` flag to install [Neovim](https://github.com/neovim/neovim).
 Use the `vi` alias to open Neovim if it's installed. This defaults to vim.
 
-##### Run optimization for [zim](https://github.com/Eriner/zim)
-Open a new terminal and run:
-
-```
-source ~/.zlogin
-```
 
 ### Installation info
-- `./install.sh` installs dotfiles, zim, vimrc & plugins, and homebrew on macOS
-- `./install-vim.sh` installs just vimrc, vim plugins, and, optionally, Neovim
+- `./install.sh` installs dotfiles, prezto, vimrc & plugins, homebrew on macOS
+- `./install-vim.sh` installs just vimrc, vim plugins. Neovim is optional flag.
 - `./install-tmux.sh` installs tmux.conf and [tpm](https://github.com/tmux-plugins/tpm)
-- `source ~/.zlogin` applies optimizations for
-  [zim](https://github.com/Eriner/zim). Only needs to be run once
 
 ## Customizations
 ### Git
