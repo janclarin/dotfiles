@@ -3,16 +3,16 @@
 cd $(dirname $BASH_SOURCE)
 SETUP_DIR=$(pwd)
 
-# Pull down submodules, i.e. zim, and update them.
+# Pull down submodules, i.e. prezto, and update them.
 echo "Pull and update submodules:"
 git submodule update --init --recursive
 
-# Symlink dotfiles and zim folder.
+# Symlink dotfiles and prezto folder.
 echo "Symlink and back up dotfiles in dotfiles.old:"
 mkdir -pv dotfiles.old
 for file in aliases exports path profile \
             gitconfig gitignore \
-            zim zlogin zprofile zshrc; do
+            prezto zlogin zpreztorc zprofile zshrc; do
     [ -e ~/.$file ] && mv -v ~/.$file dotfiles.old/.$file
     ln -sfv $SETUP_DIR/$file ~/.$file
 done
