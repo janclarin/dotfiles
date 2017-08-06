@@ -20,6 +20,7 @@ cd ~/.dotfiles
 ```
 ./install.sh
 ./install-vim.sh [--nvim]
+./install-tmux.sh
 ```
 
 Specify the `--nvim` flag to install [Neovim](https://github.com/neovim/neovim).
@@ -28,7 +29,7 @@ Use the `vi` alias to open Neovim if it's installed. This defaults to vim.
 
 ### Installation info
 - `./install.sh` installs dotfiles, prezto, vimrc & plugins, homebrew on macOS
-- `./install-vim.sh` installs just vimrc, vim plugins. Neovim is optional flag
+- `./install-vim.sh` installs vimrc & vim plugins. Neovim is an optional flag
 - `./install-tmux.sh` installs tmux.conf and
     [tpm](https://github.com/tmux-plugins/tpm)
 
