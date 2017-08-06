@@ -1,6 +1,6 @@
 # Dotfiles
-Configuration files for git, vim, zsh, and
-[prezto](https://github.com/sorin-ionescu/prezto).
+Configuration files for git, [prezto](https://github.com/sorin-ionescu/prezto),
+tmux, vim/neovim, and zsh.
 
 ## Requirements
 ##### Set zsh as login shell
