@@ -30,3 +30,6 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
     'main' \
     'brackets' \
     'cursor'
+
+# Disable safe operations.
+zstyle ':prezto:module:utility' safe-ops 'no'
