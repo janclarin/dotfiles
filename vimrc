@@ -46,6 +46,7 @@ let g:airline_theme='solarized'
 " Basic settings
 " -----------------------------------------------------------------------------
 " UI config
+set relativenumber              " enable line numbers based on current line
 set mouse=a                     " enable mouse support
 set colorcolumn=80              " set marker at column 80
 set cursorline                  " highlight current line
