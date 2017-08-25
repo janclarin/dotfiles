@@ -124,6 +124,12 @@ nnoremap <leader>l :bnext<cr>
 nnoremap <leader>h :bprevious<cr>
 nnoremap <leader>q :bdelete<cr>
 
+" Move between panes using control and h, j, k, l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 " -----------------------------------------------------------------------------
 " Plugins
 " -----------------------------------------------------------------------------
