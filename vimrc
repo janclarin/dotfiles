@@ -106,7 +106,6 @@ au BufNewFile,BufRead *.js,*.json,*.html,*.css
 let mapleader=' '
 
 " Key mappings
-nnoremap ; :
 inoremap jk <esc>
 vnoremap v <esc>
 nnoremap j gj
