@@ -46,12 +46,12 @@ let g:airline_theme='solarized'
 " -----------------------------------------------------------------------------
 " UI config
 set relativenumber              " enable line numbers based on current line
+set number                      " show line numbers
 set mouse=a                     " enable mouse support
 set colorcolumn=80              " set marker at column 80
 set cursorline                  " highlight current line
 set hidden                      " keeps buffers when abandoned
 set encoding=utf-8              " unicode character encoding
-set number                      " show line numbers
 set ruler                       " show ruler
 set showcmd                     " show command in bottom bar
 set showmatch                   " highlight matching [{()}]
@@ -107,8 +107,6 @@ let mapleader=' '
 " Key mappings
 inoremap jk <esc>
 vnoremap v <esc>
-nnoremap j gj
-nnoremap k gk
 nnoremap H ^
 nnoremap L $
 " Remove highlighting
