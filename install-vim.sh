@@ -17,6 +17,7 @@ mkdir -p ~/.vim/tmp
 
 # Link the vimrc file to ~/.vimrc
 ln -sf $SETUP_DIR/vimrc ~/.vimrc
+ln -sf $SETUP_DIR/ideavimrc ~/.ideavimrc
 
 # Install nvim if flagged is specified.
 if [ "$1" = "--nvim" ]; then

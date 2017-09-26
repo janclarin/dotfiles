@@ -1,0 +1,46 @@
+" -----------------------------------------------------------------------------
+" Basic settings
+" -----------------------------------------------------------------------------
+set surround                    " emulate vim-surround
+
+" UI config
+set relativenumber              " enable line numbers based on current line
+set number                      " enable line numbers based on current line
+set showcmd                     " show command in bottom bar
+set showmatch                   " highlight matching [{()}]
+set showmode                    " always show current editing mode
+
+" Searching
+set incsearch                   " search as characters are entered
+set hlsearch                    " highlight matches
+set ignorecase                  " ignore case on search
+set smartcase                   " ignore case if all lowercase
+
+" -----------------------------------------------------------------------------
+" Mappings
+" -----------------------------------------------------------------------------
+" Set map leader
+let mapleader=' '
+
+" Key mappings
+inoremap jk <esc>
+vnoremap v <esc>
+nnoremap H ^
+nnoremap L $
+" Paste from clipboard
+nnoremap <leader>v "+p
+
+" Move between panes using control and h, j, k, l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+imap <C-n> <ESC>:action HippieCompletion<CR>a
+imap <C-p> <ESC>:action HippieBackwardCompletion<CR>a
+
+nnoremap <C-t> :action GotoFile<cr>
+nnoremap <leader>gd :action GotoDeclaration<cr>
+nnoremap <leader>h :action PreviousTab<cr>
+nnoremap <leader>l :action NextTab<cr>
+nnoremap <leader>q :action CloseContent<cr>
