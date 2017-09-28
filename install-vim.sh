@@ -24,7 +24,7 @@ if [ "$1" = "--nvim" ]; then
     # macOS-specific installations.
     if [ $(uname -s) = 'Darwin' ]; then
         # Install neovim and python support dependencies.
-        brew install neovim/neovim/neovim
+        brew install neovim
         pip2 install --user neovim
         pip3 install --user neovim
 
