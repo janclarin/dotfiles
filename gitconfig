@@ -45,6 +45,8 @@
 
     # Rebase
     rb = rebase
+    rbA = rebase --abort
+    rbC = rebase --continue
 
     # Remote
     rm = remote

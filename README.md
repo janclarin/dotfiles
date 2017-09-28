@@ -19,12 +19,13 @@ cd ~/.dotfiles
 ##### Run installation scripts
 ```
 ./install.sh
-./install-vim.sh [--nvim]
+./install-vim.sh [--nvim] [--ideavim]
 ./install-tmux.sh
 ```
 
-Specify the `--nvim` flag to install [Neovim](https://github.com/neovim/neovim).
-Use the `vi` alias to open Neovim if it's installed. This defaults to vim.
+- Specify the `--nvim` flag to install [Neovim](https://github.com/neovim/neovim).
+- Specify the `--ideavim` flag to install vimrc for [IdeaVim](https://github.com/JetBrains/ideavim).
+- Use the `vi` alias to open Neovim if it's installed. This defaults to vim.
 
 
 ### Installation info
