@@ -17,7 +17,6 @@ mkdir -p ~/.vim/tmp
 
 # Link the vimrc file to ~/.vimrc
 ln -sf $SETUP_DIR/vimrc ~/.vimrc
-ln -sf $SETUP_DIR/ideavimrc ~/.ideavimrc
 
 # Install nvim if flagged is specified.
 if [ "$1" = "--nvim" ]; then
@@ -37,6 +36,9 @@ if [ "$1" = "--nvim" ]; then
         echo "To install Neovim manually on other operating systems, refer to github.com/neovim/neovim/wiki/Installing-Neovim"
         echo "After installing, run the following: mkdir ~/.config; ln -s ~/.vim ~/.config/nvim; ln -s ~/.vimrc ~/.config/nvim/init.vim"
     fi
+elif [ "$1" = "--ideavim" ]; then
+    ln -sf $SETUP_DIR/ideavimrc ~/.ideavimrc
+    echo "ideavimrc has been linked as ~/.ideavimrc and installed plugins."
 fi
 
 # Install Vim plugins.
