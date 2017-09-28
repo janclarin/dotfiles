@@ -9,6 +9,7 @@
     b = branch --verbose
     bd = branch -d
     bD = branch -D
+    bm = branch -m
 
     # Checkout
     co = checkout
