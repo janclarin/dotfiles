@@ -126,6 +126,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Alias :W for :w
+command! -bar -nargs=* -complete=file -range=% -bang W <line1>,<line2>write<bang> <args>
+
 " -----------------------------------------------------------------------------
 " Plugins
 " -----------------------------------------------------------------------------
