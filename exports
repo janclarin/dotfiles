@@ -1,6 +1,9 @@
 # Make vim the default editor.
 export EDITOR='vi'
 
+# Zsh key timeout for vi mode.
+export KEYTIMEOUT=1
+
 # Platform.
 export PLATFORM=$(uname -s)
 

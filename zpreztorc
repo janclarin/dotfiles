@@ -18,6 +18,12 @@ zstyle ':prezto:load' pmodule \
     'syntax-highlighting' \
     'prompt'
 
+# Enable vi key bindings
+zstyle ':prezto:module:editor' key-bindings 'vi'
+zstyle ':prezto:module:editor:info:keymap:primary:insert' format 'I'
+zstyle ':prezto:module:editor:info:keymap:primary:overwrite' format 'O'
+zstyle ':prezto:module:editor:info:keymap:alternate' format '<<<'
+
 # Set theme.
 zstyle ':prezto:module:prompt' theme 'pure'
 
