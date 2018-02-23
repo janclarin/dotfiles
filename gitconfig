@@ -35,6 +35,8 @@
 
     # Merge
     mg = merge
+    mgA = merge --abort
+    mgC = merge --continue
 
     # Pull
     pl = pull
