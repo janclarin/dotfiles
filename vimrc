@@ -18,8 +18,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vader.vim'
-Plug 'mxw/vim-jsx', { 'for': 'javascript'}
-Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
