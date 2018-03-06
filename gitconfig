@@ -17,6 +17,8 @@
 
     # Cherry pick
     cp = cherry-pick
+    cpA = cherry-pick --abort
+    cpC = cherry-pick --continue
 
     # Clone
     cl = clone
