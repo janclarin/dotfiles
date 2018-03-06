@@ -27,6 +27,7 @@
     c = commit
     cm = commit -m
     cA = commit --amend
+    can = commit --amend --no-edit
 
     # Diff
     d = diff --color-words
