@@ -9,15 +9,19 @@ mv ~/.tmux.conf ~/.tmux.conf.old 2> /dev/null
 
 # macOS-specific installations.
 if [ $(uname -s) = 'Darwin' ]; then
+  brew install tmux
   # Install as dependency for tmux-yank
   brew install reattach-to-user-namespace
 else
+  apt-get install tmux
   # Install as dependency for tmux-yank
   apt-get install xsel
 fi
 
 # Install tpm.
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
 
 # Link the tmux.conf file to ~/.tmux.conf
 ln -sf $SETUP_DIR/tmux.conf ~/.tmux.conf
