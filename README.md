@@ -6,7 +6,7 @@ tmux, vim/neovim, and zsh.
 ##### Set zsh as login shell
 
 ```
-chsh -s $(which zsh)
+chsh -s $(which zsh) $(whoami)
 ```
 
 ## Install
