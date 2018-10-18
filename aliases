@@ -22,6 +22,10 @@ elif [ "$PLATFORM" = 'Linux' ]; then
     alias update='sudo apt-get update; sudo apt-get upgrade -y; vim +PlugUpdate +qall'
 fi
 
+# Tmux.
+alias ta='tmux attach -t'
+alias tn='tmux new -s'
+
 # Use nvim or vim instead of vi.
 if (( $+commands[nvim] )); then
     alias vi='nvim'
