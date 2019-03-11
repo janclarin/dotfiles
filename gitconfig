@@ -50,6 +50,7 @@
 
     # Rebase
     rb = rebase
+    rbi = rebase --interactive
     rbA = rebase --abort
     rbC = rebase --continue
 
