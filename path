@@ -1,6 +1,5 @@
 # Configure custom paths. Default paths are set in /etc/paths.
-export PATH=$PATH:${GOPATH//://bin:}/bin:$HOME/.rvm/bin:$HOME/Library/Haskell/bin
+export PATH=$PATH:${GOPATH//://bin:}/bin
 
-# Load RVM into a shell session as a function.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
+# Load rbenv into a path.
+eval "$(rbenv init -)"
