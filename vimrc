@@ -75,6 +75,7 @@ set smarttab                    " use shiftwidth setting for inserting tabs
 set shiftround                  " use multiple of shiftwidth when indenting
 set autoindent                  " allow autoindentation
 set copyindent                  " copy previous level of indentation
+set smartindent                 " copy syntax/style of code being edited
 set backspace=indent,eol,start  " allow backspaces over everything
 
 " Searching
