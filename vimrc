@@ -15,11 +15,13 @@ endif
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'godlygeek/tabular'        " for plasticboy/vim-markdown
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vader.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -167,6 +169,11 @@ nnoremap <leader>gP :Git push<cr>
 
 " vim-jsx settings
 let g:jsx_ext_required=0
+
+" vim-markdown settings
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_new_list_item_indent = 2
 
 " -----------------------------------------------------------------------------
 " Local configuration
