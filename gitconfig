@@ -48,6 +48,7 @@
 
     # Push
     ps = push
+    psu = push --set-upstream
 
     # Rebase
     rb = rebase
