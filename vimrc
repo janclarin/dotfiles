@@ -137,7 +137,12 @@ command! -bar -nargs=* -complete=file -range=% -bang W <line1>,<line2>write<bang
 " -----------------------------------------------------------------------------
 " ale settings
 let g:ale_emit_conflict_warnings=0
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save=1
+let g:ale_fixers = {
+\   'css': ['prettier'],
+\   'html': ['prettier'],
+\   'javascript': ['prettier'],
+\}
 
 " delimitMate settings
 let g:delimitMate_expand_cr=1
