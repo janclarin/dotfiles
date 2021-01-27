@@ -25,6 +25,10 @@ fi
 # Tmux.
 alias ta='tmux attach -t'
 alias tn='tmux new -s'
+alias tma='tmuxinator start'
+alias tme='tmuxinator open'
+alias tml='tmuxinator list'
+alias tmn='tmuxinator new'
 
 # Use nvim or vim instead of vi.
 if (( $+commands[nvim] )); then
