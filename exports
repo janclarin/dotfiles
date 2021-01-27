@@ -25,3 +25,7 @@ export FZF_DEFAULT_OPTS="
 
 # Set go path
 export GOPATH=$HOME/Dev/go
+
+# Set nvm path
+export NVM_DIR=$HOME/.nvm
+
