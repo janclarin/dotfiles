@@ -9,13 +9,9 @@ mv ~/.tmux.conf ~/.tmux.conf.old 2> /dev/null
 
 # macOS-specific installations.
 if [ $(uname -s) = 'Darwin' ]; then
-  brew install tmux
-  # Install as dependency for tmux-yank
-  brew install reattach-to-user-namespace
+  brew install tmux tmuxinator reattach-to-user-namespace # tmux-yank dependency
 else
-  apt-get install tmux
-  # Install as dependency for tmux-yank
-  apt-get install xsel
+  apt-get install tmux tmuxinator xsel # tmux-yank dependency
 fi
 
 # Install tpm.
