@@ -16,6 +16,7 @@ endif
 Plug 'altercation/vim-colors-solarized'
 Plug 'dense-analysis/ale'
 Plug 'godlygeek/tabular'        " for plasticboy/vim-markdown
+Plug 'herringtondarkholme/yats.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
