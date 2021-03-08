@@ -33,6 +33,9 @@ if [ "$1" = "--nvim" ]; then
     # Link vim configuration to neovim.
     mkdir -p ~/.config/nvim/autoload
     ln -sf $SETUP_DIR/init.vim ~/.config/nvim/init.vim
+
+    # Link CoC configuration.
+    ln -sf $SETUP_DIR/coc-settings.json ~/.config/nvim/coc-settings.json
 elif [ "$1" = "--ideavim" ]; then
     ln -sf $SETUP_DIR/ideavimrc ~/.ideavimrc
     echo "ideavimrc has been linked as ~/.ideavimrc and installed plugins."

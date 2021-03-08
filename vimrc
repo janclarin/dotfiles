@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugged')
 
 " Neovim plugins
 if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
 Plug 'altercation/vim-colors-solarized'
@@ -135,9 +135,6 @@ command! -bar -nargs=* -complete=file -range=% -bang W <line1>,<line2>write<bang
 " -----------------------------------------------------------------------------
 " Plugins
 " -----------------------------------------------------------------------------
-" ale settings
-let g:ale_emit_conflict_warnings=0
-let g:ale_fix_on_save=1
 
 " delimitMate settings
 let g:delimitMate_expand_cr=1
@@ -175,6 +172,91 @@ let g:jsx_ext_required=0
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_new_list_item_indent = 2
+
+" -----------------------------------------------------------------------------
+" CoC settings
+" -----------------------------------------------------------------------------
+let g:coc_global_extensions = [
+\ 'coc-css',
+\ 'coc-eslint',
+\ 'coc-html',
+\ 'coc-java',
+\ 'coc-json',
+\ 'coc-prettier',
+\ 'coc-pyright',
+\ 'coc-tsserver',
+\]
+
+set cmdheight=2                 " allow more space for displaying messages
+set shortmess+=c                " do not pass messages to |ins-completion-menu|
+set updatetime=300              " decrease update delay from default of 4000ms
+
+" Disable backups due to language server issues with backup files (#649).
+set nobackup
+set nowritebackup
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
+" Apply code action to current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Auto-fix current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+" Rename current symbol.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Navigate code.
+nmap <silent>gd <Plug>(coc-definition)
+nmap <silent>gy <Plug>(coc-type-definition)
+nmap <silent>gi <Plug>(coc-implementation)
+nmap <silent>gr <Plug>(coc-references)
+
+" Move cursor to previous error.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+" Move cursor to next error.
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+" Use <tab> to trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Make <cr> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible()
+    \? coc#_select_confirm()
+    \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
 
 " -----------------------------------------------------------------------------
 " Local configuration
