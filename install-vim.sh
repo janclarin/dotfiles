@@ -24,7 +24,6 @@ if [ "$1" = "--nvim" ]; then
     if [ $(uname -s) = 'Darwin' ]; then
         # Install neovim and python support dependencies.
         brew install neovim
-        pip2 install --user neovim
         pip3 install --user neovim
     else
         sudo apt-get install neovim python-neovim python3-neovim
