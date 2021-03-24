@@ -1,3 +1,7 @@
+[init]
+
+    defaultBranch = main
+
 [alias]
 
     # Add
