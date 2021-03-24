@@ -96,7 +96,7 @@ set directory=~/.vim/tmp
 
 " Language configs
 " HTML/CSS/JavaScript: Use 2-space tabs as per Google Style guidelines
-au BufNewFile,BufRead *.js,*.json,*.jsx,*.html,*.css,*.scss
+au BufNewFile,BufRead *.js,*.json,*.jsx,*.html,*.css,*.scss,*.ts,*.tsx
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
