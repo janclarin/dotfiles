@@ -22,6 +22,7 @@ brew install --cask \
     imageoptim \
     keepingyouawake \
     scroll-reverser \
+    sensiblesidebuttons \
     spotify \
     textmate \
     transmission
