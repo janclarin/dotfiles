@@ -9,6 +9,20 @@ fi
 
 echo "Installing Homebrew Cask apps"
 
-brew cask install \
-    alfred appcleaner dash google-backup-and-sync google-chrome iina java \
-    keepingyouawake mounty now spectacle spotify textmate transmission
+brew tap homebrew/cask-fonts
+
+brew install --cask \
+    1password \
+    alfred \
+    amethyst \
+    appcleaner \
+    font-jetbrains-mono \
+    google-backup-and-sync \
+    iina \
+    imageoptim \
+    java \
+    keepingyouawake \
+    scroll-reverser \
+    spotify \
+    textmate \
+    transmission
