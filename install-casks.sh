@@ -20,7 +20,6 @@ brew install --cask \
     google-backup-and-sync \
     iina \
     imageoptim \
-    java \
     keepingyouawake \
     scroll-reverser \
     spotify \
