@@ -17,7 +17,7 @@ brew install --cask \
     amethyst \
     appcleaner \
     font-jetbrains-mono \
-    google-backup-and-sync \
+    google-drive \
     iina \
     imageoptim \
     keepingyouawake \
