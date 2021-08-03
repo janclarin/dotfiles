@@ -29,3 +29,5 @@ export GOPATH=$HOME/Dev/go
 # Set nvm path
 export NVM_DIR=$HOME/.nvm
 
+# Set homebrew prefix
+export HOMEBREW_PREFIX=$(brew --prefix)
