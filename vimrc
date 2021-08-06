@@ -145,7 +145,8 @@ let g:delimitMate_expand_cr=1
 let g:deoplete#enable_at_startup = 1
 
 " fzf mappings
-nnoremap <C-T> :Files<cr>
+nnoremap <C-T> :GFiles<cr>
+nnoremap <C-G> :Files<cr>
 nnoremap <leader><enter> :Buffers<cr>
 nnoremap <leader>gl :Commits<cr>
 
