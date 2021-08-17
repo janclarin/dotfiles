@@ -25,6 +25,7 @@ Plug 'numirias/semshi'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
 Plug 'Raimondi/delimitMate'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tomlion/vim-solidity'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
