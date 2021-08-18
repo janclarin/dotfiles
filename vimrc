@@ -148,6 +148,7 @@ let g:delimitMate_expand_cr=1
 let g:deoplete#enable_at_startup = 1
 
 " fzf mappings
+nnoremap \ :Rg<cr>
 nnoremap <C-T> :GFiles<cr>
 nnoremap <C-G> :Files<cr>
 nnoremap <leader><enter> :Buffers<cr>
@@ -164,7 +165,7 @@ nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gg :Ggrep<space>
 nnoremap <leader>gm :Gmove<cr>
-nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gs :Git<cr>
 nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>gW :Gwq<cr>
 nnoremap <leader>git :Git<space>
