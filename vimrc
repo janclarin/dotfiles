@@ -30,6 +30,7 @@ Plug 'tomlion/vim-solidity'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'yuezk/vim-js'
 
 " Local plugins
 if filereadable($HOME . "/.vimrc.plugins.local")
