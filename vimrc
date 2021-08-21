@@ -159,12 +159,12 @@ let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled=1
 
 " vim-fugitive mappings
-nnoremap <leader>gb :Gblame<cr>
-nnoremap <leader>gB :Gbrowse<cr>
-nnoremap <leader>gc :Gcommit<cr>
-nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gb :Git blame<cr>
+nnoremap <leader>gh :GBrowse<cr>
+nnoremap <leader>gc :Git commit<cr>
+nnoremap <leader>gd :Git diff<cr>
 nnoremap <leader>gg :Ggrep<space>
-nnoremap <leader>gm :Gmove<cr>
+nnoremap <leader>gm :GMove<cr>
 nnoremap <leader>gs :Git<cr>
 nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>gW :Gwq<cr>
