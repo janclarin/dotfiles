@@ -21,7 +21,7 @@ Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'numirias/semshi'
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
 Plug 'Raimondi/delimitMate'
