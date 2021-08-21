@@ -106,6 +106,10 @@ au BufNewFile,BufRead *.js,*.json,*.jsx,*.html,*.css,*.scss,*.ts,*.tsx
     \ set softtabstop=2 |
     \ set shiftwidth=2
 
+" Fix syntax highlighting for very long files
+au BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+au BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
 " -----------------------------------------------------------------------------
 " Mappings
 " -----------------------------------------------------------------------------
