@@ -190,7 +190,6 @@ let g:vim_markdown_new_list_item_indent = 2
 let g:coc_global_extensions = [
 \ 'coc-css',
 \ 'coc-eslint',
-\ 'coc-graphql',
 \ 'coc-html',
 \ 'coc-java',
 \ 'coc-json',
