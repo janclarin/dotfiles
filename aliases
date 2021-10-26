@@ -37,12 +37,12 @@ gsy () {
 alias path='echo -e ${PATH//:/\\n}'
 
 # Open file with associated program.
-if [ "$PLATFORM" = 'Darwin' ]; then
+if [[ "$PLATFORM" == 'Darwin' ]]; then
     alias o='open'
     # Check and install updates from App Store, homebrew, npm, and gem.
     alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; vim +PlugUpdate +qall'
 
-elif [ "$PLATFORM" = 'Linux' ]; then
+elif [[ "$PLATFORM" == 'Linux' ]]; then
     alias o='xdg-open'
     alias update='sudo apt-get update; sudo apt-get upgrade -y; vim +PlugUpdate +qall'
 fi
