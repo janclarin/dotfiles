@@ -19,6 +19,7 @@ set incsearch                   " search as characters are entered
 set hlsearch                    " highlight matches
 set ignorecase                  " ignore case on search
 set smartcase                   " ignore case if all lowercase
+set ideajoin                    " use ide join
 
 " -----------------------------------------------------------------------------
 " Mappings
@@ -48,3 +49,4 @@ nnoremap <leader>gd :action GotoDeclaration<cr>
 nnoremap <leader>h :action PreviousTab<cr>
 nnoremap <leader>l :action NextTab<cr>
 nnoremap <leader>q :action CloseContent<cr>
+
