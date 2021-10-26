@@ -2,11 +2,36 @@
 # Aliases.
 #
 
+# Use nvim or vim instead of vi.
+if (( $+commands[nvim] )); then
+    alias vi='nvim'
+else
+    alias vi='vim'
+fi
+
 # Clear screen.
 alias c='clear'
 
 # Git.
 alias g='git'
+alias gi='vi $(git ls-files -o -m --exclude-standard)'
+gsy () {
+    local branch
+    local main
+
+    branch="$(git branch --show-current)"
+    main="$(git branch -l master main | sed 's/^[*]*[ \t]*//')"
+
+    if [[ "$branch" == "$main" ]]; then
+        git pull
+    else
+        git checkout $main
+        git pull
+        git checkout $branch
+        git merge $main
+    fi
+}
+
 
 # Print each PATH entry on a separate line.
 alias path='echo -e ${PATH//:/\\n}'
@@ -29,13 +54,6 @@ alias tma='tmuxinator start'
 alias tme='tmuxinator open'
 alias tml='tmuxinator list'
 alias tmn='tmuxinator new'
-
-# Use nvim or vim instead of vi.
-if (( $+commands[nvim] )); then
-    alias vi='nvim'
-else
-    alias vi='vim'
-fi
 
 # Exit session.
 alias x='exit'
