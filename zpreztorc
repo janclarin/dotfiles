@@ -16,6 +16,7 @@ zstyle ':prezto:load' pmodule \
     'utility' \
     'completion' \
     'syntax-highlighting' \
+    'git' \
     'prompt'
 
 # Enable vi key bindings
