@@ -21,7 +21,6 @@ cd ~/.dotfiles
 ./install.sh
 ./install-vim.sh [--nvim] [--ideavim]
 ./install-tmux.sh
-./install-casks.sh
 ```
 
 - Specify the `--nvim` flag to install [Neovim](https://github.com/neovim/neovim).
@@ -34,7 +33,6 @@ cd ~/.dotfiles
 - `./install-vim.sh` installs vimrc & vim plugins. Neovim is an optional flag
 - `./install-tmux.sh` installs tmux.conf and
     [tpm](https://github.com/tmux-plugins/tpm)
-- `./install-casks.sh` installs Homebrew Cask apps on macOS
 
 ## Customizations
 ### Git

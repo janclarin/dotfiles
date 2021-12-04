@@ -29,7 +29,7 @@ if [ $(uname -s) = 'Darwin' ]; then
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
     # Install Homebrew packages.
-    brew install bat fzf git imagemagick java node python3 ruby tree vim zsh
+    brew bundle
 
     # Configure Homebrew packages.
     # fzf
