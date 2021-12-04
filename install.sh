@@ -33,7 +33,7 @@ if [ $(uname -s) = 'Darwin' ]; then
 
     # Configure Homebrew packages.
     # fzf
-    /usr/local/opt/fzf/install
+    $HOMEBREW_PREFIX/opt/fzf/install
 else
     # Install and configure fzf.
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
