@@ -3,20 +3,20 @@ Configuration files for git, [prezto](https://github.com/sorin-ionescu/prezto),
 tmux, vim/neovim, and zsh.
 
 ## Requirements
-##### Set zsh as login shell
+### Set zsh as login shell
 
 ```
 chsh -s $(which zsh) $(whoami)
 ```
 
 ## Install
-##### Clone the repository
+### Clone the repository
 ```
 git clone https://github.com/janclarin/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ```
 
-##### Run installation scripts
+### Run installation scripts
 ```
 ./install.sh
 ./install-vim.sh [--nvim] [--ideavim]
@@ -29,7 +29,7 @@ cd ~/.dotfiles
 - Use the `vi` alias to open Neovim if it's installed. This defaults to vim.
 
 
-### Installation info
+#### Installation info
 - `./install.sh` installs dotfiles, prezto, vimrc & plugins, Homebrew on macOS
 - `./install-vim.sh` installs vimrc & vim plugins. Neovim is an optional flag
 - `./install-tmux.sh` installs tmux.conf and
@@ -74,3 +74,11 @@ after the dotfiles version.
 - `path.local`
 - `exports.local`
 - `aliases.local`
+
+## Update
+### Prezto
+```
+git smu
+```
+
+Then commit `prezto/`
