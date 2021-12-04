@@ -35,7 +35,8 @@ if [ "$1" = "--nvim" ]; then
 
     # Link CoC configuration.
     ln -sf $SETUP_DIR/coc-settings.json ~/.config/nvim/coc-settings.json
-elif [ "$1" = "--ideavim" ]; then
+fi
+if [ "$1" = "--ideavim" ]; then
     ln -sf $SETUP_DIR/ideavimrc ~/.ideavimrc
     echo "ideavimrc has been linked as ~/.ideavimrc and installed plugins."
 fi
