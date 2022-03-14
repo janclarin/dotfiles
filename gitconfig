@@ -52,7 +52,7 @@
 
     # Push
     ps = push
-    psu = push --set-upstream
+    psu = push --set-upstream origin HEAD
 
     # Rebase
     rb = rebase
@@ -74,6 +74,10 @@
 
     # Submodule
     smu = submodule update --recursive --remote
+
+    # Stash
+    st = stash
+    stp = stash pop
 
 [apply]
 
