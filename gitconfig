@@ -66,6 +66,7 @@
 
     # Reset
     rs = reset
+    rsf = reset --
     rsS = reset --soft
     rsH = reset --hard
 
