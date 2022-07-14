@@ -152,7 +152,8 @@
     log = true
 
 [push]
-
+    # Automatically push new branches to remote without --set-upstream origin.
+    autoSetupRemote = true
     # Push only the current branch to the one that git pull would pull from.
     default = simple
 
