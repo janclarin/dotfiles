@@ -25,10 +25,8 @@ gsy () {
     if [[ "$branch" == "$main" ]]; then
         git pull
     else
-        git checkout $main
-        git pull
-        git checkout $branch
-        git merge $main
+        git fetch origin $main:$main
+        git merge $main --no-edit
     fi
 }
 
