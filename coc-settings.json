@@ -17,5 +17,8 @@
       "typescriptreact"
     ]
   },
-  "tsserver.formatOnType": true
+  "tsserver": {
+    "formatOnType": true,
+    "maxTsServerMemory": "8192"
+  }
 }
