@@ -1,5 +1,5 @@
 # Configure custom paths. Default paths are set in /etc/paths.
-export PATH=$PATH:${GOPATH//://bin:}/bin
+export PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:${GOPATH//://bin:}/bin:$PATH
 
 # Load rbenv into a path.
 if [ command -v rbenv &> /dev/null ]; then
