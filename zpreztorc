@@ -25,18 +25,21 @@ zstyle ':prezto:module:editor:info:keymap:primary:insert' format 'I'
 zstyle ':prezto:module:editor:info:keymap:primary:overwrite' format 'O'
 zstyle ':prezto:module:editor:info:keymap:alternate' format '<<<'
 
+# Disable git aliases
+zstyle ':prezto:module:git:alias' skip 'yes'
+
 # Set theme.
 zstyle ':prezto:module:prompt' theme 'pure'
-
-# Set the string below to the desired terminal title format string.
-# Format: 'username@host: /current/directory'
-zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
 
 # Set highlighters used with the syntax-highlighting module.
 zstyle ':prezto:module:syntax-highlighting' highlighters \
     'main' \
     'brackets' \
     'cursor'
+
+# Set the string below to the desired terminal title format string.
+# Format: 'username@host: /current/directory'
+zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
 
 # Disable safe operations.
 zstyle ':prezto:module:utility' safe-ops 'no'
