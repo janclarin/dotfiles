@@ -52,7 +52,9 @@
 
     # Push
     ps = push
+    psf = push --force
     psn = push --no-verify
+    psnf = push --no-verify --force
     psu = push --set-upstream origin HEAD
 
     # Rebase
