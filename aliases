@@ -33,6 +33,7 @@ gsy () {
 # gh cli.
 alias ghc='gh pr create'
 alias ghv='gh pr view --web'
+alias ghrv='gh repo view --web'
 
 # Print each PATH entry on a separate line.
 alias path='echo -e ${PATH//:/\\n}'
