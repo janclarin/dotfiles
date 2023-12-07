@@ -123,6 +123,7 @@ nnoremap H ^
 nnoremap L $
 " Remove highlighting
 nnoremap // :nohl<cr>
+nnoremap <esc> :nohl<cr>
 " Paste from clipboard
 nnoremap <leader>v "+p
 
