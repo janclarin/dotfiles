@@ -26,7 +26,7 @@ if [ $(uname -s) = 'Darwin' ]; then
     # Install Homebrew if it doesn't exist.
     echo "Install Homebrew packages:"
     [ -z "$(which brew)" ] &&
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     # Install Homebrew packages.
     brew bundle
