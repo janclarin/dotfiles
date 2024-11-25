@@ -58,6 +58,28 @@ function yi {
         npm install
     fi
 }
+function ya {
+    if [[ -f "yarn.lock" ]]; then
+        yarn add "$@" 
+    elif [[ -f "pnpm-lock.yaml" ]]; then
+        pnpm add "$@" 
+    elif [[ -f "package-lock.json" ]]; then
+        npm install "$@"
+    else
+        npm install "$@"
+    fi
+}
+function yad {
+    if [[ -f "yarn.lock" ]]; then
+        yarn add  --dev "$@" 
+    elif [[ -f "pnpm-lock.yaml" ]]; then
+        pnpm add --save-dev "$@" 
+    elif [[ -f "package-lock.json" ]]; then
+        npm install --save-dev "$@"
+    else
+        npm install --save-dev "$@"
+    fi
+}
 
 # Print each PATH entry on a separate line.
 alias path='echo -e ${PATH//:/\\n}'
