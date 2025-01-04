@@ -40,6 +40,10 @@ if [ "$1" = "--ideavim" ]; then
     ln -sf $SETUP_DIR/ideavimrc ~/.ideavimrc
     echo "ideavimrc has been linked as ~/.ideavimrc and installed plugins."
 fi
+if [ "$1" = "--vscode" ]; then
+    ln -sf $SETUP_DIR/vscodevimrc ~/.vscodevimrc
+    echo "vscodevimrc has been linked as ~/.vscodevimrc and installed plugins."
+fi
 
 # Install Vim plugins.
 vim +PlugInstall +qall

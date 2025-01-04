@@ -1,0 +1,88 @@
+" =============================================================================
+" Jan Clarin's VSCode vim configuration file
+" =============================================================================
+
+" -----------------------------------------------------------------------------
+" Basic settings
+" -----------------------------------------------------------------------------
+" UI config
+set relativenumber              " enable line numbers based on current line
+set number                      " show line numbers
+set mouse=a                     " enable mouse support
+set colorcolumn=80              " set marker at column 80
+set cursorline                  " highlight current line
+set hidden                      " keeps buffers when abandoned
+set encoding=utf-8              " unicode character encoding
+set ruler                       " show ruler
+set showcmd                     " show command in bottom bar
+set showmatch                   " highlight matching [{()}]
+set showmode                    " always show current editing mode
+set scrolloff=5                 " maintains 5 lines above cursor when scrolling
+set laststatus=2                " always display status line
+set visualbell                  " visual bell enabled
+set splitbelow                  " split windows appear below
+set splitright                  " split windows appear to the right
+set wildmenu                    " enable completion on the command line
+set wildmode=list:longest       " list all matches
+set ttyfast                     " fast terminal connection
+set lazyredraw                  " redraw only when it needs to
+
+" Formatting
+set tabstop=4                   " number of visual spaces per tab
+set softtabstop=4               " number of spaces in tab when editing
+set shiftwidth=4                " number of spaces for autoindenting
+set expandtab                   " use spaces in place of tabs
+set smarttab                    " use shiftwidth setting for inserting tabs
+set shiftround                  " use multiple of shiftwidth when indenting
+set autoindent                  " allow autoindentation
+set copyindent                  " copy previous level of indentation
+set smartindent                 " copy syntax/style of code being edited
+set backspace=indent,eol,start  " allow backspaces over everything
+
+" Searching
+set incsearch                   " search as characters are entered
+set hlsearch                    " highlight matches
+set ignorecase                  " ignore case on search
+set smartcase                   " ignore case if all lowercase
+
+" Set command timeout length
+set ttimeout
+set ttimeoutlen=100
+
+" -----------------------------------------------------------------------------
+" Mappings
+" -----------------------------------------------------------------------------
+" Set map leader
+let mapleader=' '
+
+" Key mappings
+inoremap jk <esc>
+vnoremap v <esc>
+nnoremap H ^
+nnoremap L $
+" Remove highlighting
+nnoremap // :nohl<cr>
+nnoremap <esc> :nohl<cr>
+" Paste from clipboard
+nnoremap <leader>v "+p
+
+" Buffer managing mappings
+nnoremap <leader>e :edit 
+nnoremap <leader>l :bnext<cr>
+nnoremap <leader>h :bprevious<cr>
+nnoremap <leader>q :bdelete<cr>
+
+" Move between panes using control and h, j, k, l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Search navigation
+" Find next search result
+nnoremap <leader>n n
+" Find previous search result
+nnoremap <leader>N N
+
+" Alias :W for :w
+command! -bar -nargs=* -complete=file -range=% -bang W <line1>,<line2>write<bang> <args>

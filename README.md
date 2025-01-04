@@ -19,7 +19,7 @@ cd ~/.dotfiles
 ### Run installation scripts
 ```
 ./install.sh
-./install-vim.sh [--nvim] [--ideavim]
+./install-vim.sh [--nvim] [--ideavim] [--vscode]
 ./install-tmux.sh
 ```
 
