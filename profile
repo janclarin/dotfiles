@@ -16,3 +16,5 @@ done
 
 unset dotfiles
 unset source_file_if_exists
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
