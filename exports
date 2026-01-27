@@ -28,3 +28,8 @@ export GOPATH=$HOME/Dev/go
 
 # Set nvm path
 export NVM_DIR=$HOME/.nvm
+
+# Set homebrew prefix
+if [[ "$PLATFORM" == 'Darwin' ]]; then
+    export HOMEBREW_PREFIX=$(brew --prefix)
+fi
