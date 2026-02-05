@@ -10,28 +10,25 @@ call plug#begin('~/.vim/plugged')
 
 " Neovim plugins
 if has('nvim')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'williamboman/mason.nvim'
+  Plug 'williamboman/mason-lspconfig.nvim'
 endif
 
+
 Plug 'altercation/vim-colors-solarized'
-Plug 'dense-analysis/ale'
 Plug 'godlygeek/tabular'        " for plasticboy/vim-markdown
 Plug 'herringtondarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
-Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
 Plug 'Raimondi/delimitMate'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'tomlion/vim-solidity'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'yuezk/vim-js'
 
 " Local plugins
 if filereadable($HOME . "/.vimrc.plugins.local")
@@ -44,7 +41,7 @@ call plug#end()
 " Theme settings
 " -----------------------------------------------------------------------------
 set t_Co=256
-set background=dark
+set background=light
 colorscheme solarized
 let g:airline_theme='solarized'
 
@@ -146,6 +143,10 @@ command! -bar -nargs=* -complete=file -range=% -bang W <line1>,<line2>write<bang
 " Plugins
 " -----------------------------------------------------------------------------
 
+if has('nvim')
+    set omnifunc=v:lua.vim.lsp.omnifunc
+endif
+
 " delimitMate settings
 let g:delimitMate_expand_cr=1
 
@@ -163,41 +164,10 @@ nnoremap <leader>gl :Commits<cr>
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled=1
 
-" vim-fugitive mappings
-nnoremap <leader>gb :Git blame<cr>
-nnoremap <leader>gh :GBrowse<cr>
-nnoremap <leader>gc :Git commit<cr>
-nnoremap <leader>gd :Git diff<cr>
-nnoremap <leader>gg :Ggrep<space>
-nnoremap <leader>gm :GMove<cr>
-nnoremap <leader>gs :Git<cr>
-nnoremap <leader>gw :Gwrite<cr>
-nnoremap <leader>gW :Gwq<cr>
-nnoremap <leader>git :Git<space>
-nnoremap <leader>gp :Git pull<cr>
-nnoremap <leader>gP :Git push<cr>
-
-" vim-jsx settings
-let g:jsx_ext_required=0
-
 " vim-markdown settings
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_new_list_item_indent = 2
-
-" -----------------------------------------------------------------------------
-" CoC settings
-" -----------------------------------------------------------------------------
-let g:coc_global_extensions = [
-\ 'coc-css',
-\ 'coc-eslint',
-\ 'coc-html',
-\ 'coc-java',
-\ 'coc-json',
-\ 'coc-prettier',
-\ 'coc-pyright',
-\ 'coc-tsserver',
-\]
 
 set cmdheight=2                 " allow more space for displaying messages
 set shortmess+=c                " do not pass messages to |ins-completion-menu|
@@ -216,55 +186,11 @@ else
   set signcolumn=yes
 endif
 
-" Apply code action to current line.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Auto-fix current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
-" Rename current symbol.
-nmap <leader>rn <Plug>(coc-rename)
-
-" Navigate code.
-nmap <silent>gd <Plug>(coc-definition)
-nmap <silent>gy <Plug>(coc-type-definition)
-nmap <silent>gi <Plug>(coc-implementation)
-nmap <silent>gr <Plug>(coc-references)
-
-" Move cursor to previous error.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-" Move cursor to next error.
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" Use <tab> to trigger completion with characters ahead and navigate.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Make <cr> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible()
-    \? coc#_select_confirm()
-    \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
 " Show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
   else
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif

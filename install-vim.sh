@@ -22,19 +22,14 @@ ln -sf $SETUP_DIR/vimrc ~/.vimrc
 if [ "$1" = "--nvim" ]; then
     # macOS-specific installations.
     if [ $(uname -s) = 'Darwin' ]; then
-        # Install neovim and python support dependencies.
         brew install neovim
-        pip3 install --user neovim
     else
-        sudo apt-get install neovim python-neovim python3-neovim
+        sudo apt-get install neovim
     fi
 
     # Link vim configuration to neovim.
     mkdir -p ~/.config/nvim/autoload
     ln -sf $SETUP_DIR/init.vim ~/.config/nvim/init.vim
-
-    # Link CoC configuration.
-    ln -sf $SETUP_DIR/coc-settings.json ~/.config/nvim/coc-settings.json
 fi
 if [ "$1" = "--ideavim" ]; then
     ln -sf $SETUP_DIR/ideavimrc ~/.ideavimrc
