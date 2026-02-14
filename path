@@ -1,8 +1,12 @@
 # Configure custom paths. Default paths are set in /etc/paths.
 export PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:${GOPATH//://bin:}/bin:$PATH
 
+# Set homebrew prefix
+if [[ "$PLATFORM" == 'Darwin' ]]; then
+    export HOMEBREW_PREFIX=$(brew --prefix)
+fi
+
 # Load rbenv into a path.
 if [ command -v rbenv &> /dev/null ]; then
   eval "$(rbenv init -)"
 fi
-
