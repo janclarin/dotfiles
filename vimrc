@@ -41,7 +41,7 @@ call plug#end()
 " Theme settings
 " -----------------------------------------------------------------------------
 set t_Co=256
-set background=light
+set background=dark
 colorscheme solarized
 let g:airline_theme='solarized'
 
