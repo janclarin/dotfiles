@@ -16,12 +16,12 @@ if has('nvim')
 endif
 
 
-Plug 'altercation/vim-colors-solarized'
 Plug 'godlygeek/tabular'        " for plasticboy/vim-markdown
 Plug 'herringtondarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'lifepillar/vim-solarized8'
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'plasticboy/vim-markdown'
 Plug 'Raimondi/delimitMate'
@@ -42,7 +42,7 @@ call plug#end()
 " -----------------------------------------------------------------------------
 set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme solarized8
 let g:airline_theme='solarized'
 
 " -----------------------------------------------------------------------------
